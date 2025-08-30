@@ -1,0 +1,9 @@
+@use '../mixins/variables' as vars;
+
+body {
+  font-family: vars.$font-base;
+}
+
+a {
+  font-family: vars.$font-base;
+}

@@ -1,0 +1,11 @@
+// main.scss
+@use 'mixins/variables' as vars;
+@use 'mixins/mixins' as mixin;
+
+@use 'base/reset';
+
+@use 'layout/header';
+@use 'layout/footer';
+
+@use 'components/buttons';
+@use 'components/whatsapp';

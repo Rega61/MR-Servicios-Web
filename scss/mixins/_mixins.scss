@@ -1,0 +1,34 @@
+// Mixin para centrado flexbox (horizontal y vertical)
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para texto truncado con puntos suspensivos
+@mixin text-truncate($lines: 1) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+
+// Mixin para transición suave
+@mixin transition($properties: all, $duration: 0.3s, $timing: ease-in-out) {
+  transition-property: $properties;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+}
+
+// Mixin para media queries (breakpoints)
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 576px) { @content; }
+  } @else if $breakpoint == medium {
+    @media (max-width: 768px) { @content; }
+  } @else if $breakpoint == large {
+    @media (max-width: 992px) { @content; }
+  } @else if $breakpoint == xlarge {
+    @media (max-width: 1200px) { @content; }
+  }
+}

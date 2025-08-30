@@ -1,0 +1,30 @@
+@import '../mixins/variables';
+@import '../mixins/mixins';
+
+.whatsapp-button {
+  position: fixed;
+  bottom: $spacing-lg;
+  right: $spacing-lg;
+  background-color: $whatsapp-green;
+  color: #fff;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  @include flex-center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 1.75rem;
+  z-index: 1000;
+  @include transition(background-color, 0.3s);
+
+  &:hover,
+  &:focus {
+    background-color: darken($whatsapp-green, 10%);
+    text-decoration: none;
+    outline: none;
+  }
+
+  i {
+    pointer-events: none; // Para que el icono no interfiera con el clic
+  }
+}
