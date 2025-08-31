@@ -1,0 +1,94 @@
+@use "../mixins/variables" as vars;
+@use "sass:color";
+
+#servicios {
+  background-color: vars.$dark-bg; // fondo oscuro de la sección
+  color: vars.$text-color;
+  padding: 5rem 2rem;
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+    @media (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    color: vars.$text-color;
+
+    a {
+      color: vars.$accent-color;
+      text-decoration: none;
+
+      &:hover {
+        color: color.adjust(vars.$accent-color, $lightness: -10%);
+      }
+    }
+  }
+
+  .row {
+    .card {
+      background-color: vars.$dark-bg; // ahora usa variable existente
+      border: none;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      color: vars.$text-color;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      }
+
+      img {
+        border-top-left-radius: 0.75rem;
+        border-top-right-radius: 0.75rem;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        padding: 1.5rem;
+
+        .card-title {
+          font-size: 1.25rem;
+          font-weight: 600;
+          margin-bottom: 0.75rem;
+          color: vars.$accent-color;
+        }
+
+        .card-text {
+          font-size: 0.95rem;
+          color: vars.$text-color;
+        }
+      }
+    }
+  }
+
+  .btn {
+    background-color: vars.$accent-color;
+    color: vars.$dark-bg;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: vars.$hover-accent;
+      transform: scale(1.05);
+    }
+  }
+}

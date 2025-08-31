@@ -1,51 +1,57 @@
-@import '../mixins/variables';
-@import '../mixins/mixins';
+@use "../mixins/variables" as vars;
+@use "sass:color";
+
+//header
+header{
+  background-color: color.adjust(vars.$dark-bg, $lightness: 5%);
+  padding: 1rem 2rem;
+}
 
 header {
-  nav.navbar {
-    background-color: $dark-bg !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: $spacing-unit 0;
-    }
 
-    .navbar-brand {
-      font-family: $font-family-base;
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #fff !important;
-      letter-spacing: 1px;
-      @include transition(color);
+// NavBar de la página
+.navbar {
+  background-color: vars.$dark-bg !important;
+  padding: 1rem 2rem;
 
-      &:hover,
-      &:focus {
-        color: $primary-color !important;
-      }
-    }
+  .navbar-brand {
+    color: vars.$accent-color !important;
+    font-weight: bold;
+    font-size: 1.5rem;
 
-    .navbar-toggler {
-      border-color: lighten($dark-bg, 20%);
-    }
-
-    .navbar-nav {
-      display: flex;
-      align-items: center;
-      gap: $spacing-unit;
-
-      .nav-link {
-        color: #ddd !important;
-        font-weight: 500;
-        @include transition(color);
-
-        &.active,
-        &:hover,
-        &:focus {
-          color: $primary-color !important;
-        }
-      }
+    &:hover {
+      color: vars.$hover-accent !important;
     }
   }
+
+  .nav-link {
+    color: vars.$text-color !important;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+
+    &.active {
+      color: vars.$accent-color !important;
+    }
+
+    &:hover {
+      color: vars.$hover-accent !important;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: vars.$accent-color !important;
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='" + vars.$accent-color + "' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  }
+}
+
+.sticky-top {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }

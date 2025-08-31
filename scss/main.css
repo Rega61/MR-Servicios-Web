@@ -1,0 +1,101 @@
+header {
+  background-color: rgb(30.75, 30.75, 30.75);
+  padding: 1rem 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  background-color: #121212 !important;
+  padding: 1rem 2rem;
+}
+.navbar .navbar-brand {
+  color: #F7D42C !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.navbar .navbar-brand:hover {
+  color: rgb(231.2328767123, 192.8767123288, 8.7671232877) !important;
+}
+.navbar .nav-link {
+  color: #ffffff !important;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+.navbar .nav-link.active {
+  color: #F7D42C !important;
+}
+.navbar .nav-link:hover {
+  color: rgb(231.2328767123, 192.8767123288, 8.7671232877) !important;
+}
+.navbar .navbar-toggler {
+  border-color: #F7D42C !important;
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#F7D42C' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.sticky-top {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  background-color: rgb(30.75, 30.75, 30.75);
+  padding: 1rem 2rem;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #F7D42C;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(231.2328767123, 192.8767123288, 8.7671232877);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+button, .btn {
+  background-color: #F7D42C;
+  color: #121212;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover, .btn:hover {
+  background-color: rgb(231.2328767123, 192.8767123288, 8.7671232877);
+}
+
+.card {
+  background-color: rgb(30.75, 30.75, 30.75);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}/*# sourceMappingURL=main.css.map */

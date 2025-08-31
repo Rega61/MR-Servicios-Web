@@ -1,11 +1,13 @@
-// main.scss
-@use 'mixins/variables' as vars;
-@use 'mixins/mixins' as mixin;
+@use "mixins/variables" as vars;
 
-@use 'base/reset';
+@use "layout/header";
+@use "layout/footer";
 
-@use 'layout/header';
-@use 'layout/footer';
+@use "base/base";
 
-@use 'components/buttons';
-@use 'components/whatsapp';
+@use "components/buttons";
+@use "components/whatsapp";
+
+@use "pages/index";
+@use "pages/proyectos";
+@use "pages/contacto";

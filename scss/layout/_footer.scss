@@ -1,26 +1,21 @@
-@import '../mixins/variables';
-@import '../mixins/mixins';
+@use "../mixins/variables" as vars;
+@use "sass:color";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // asegura que el footer siempre esté al final
+  margin: 0;
+}
+
+main {
+  flex: 1; // ocupa todo el espacio entre header y footer
+}
+
 footer {
-  background-color: $dark-bg;
-  color: #ccc;
-  padding: $spacing-lg 0;
+  background-color: color.adjust(vars.$dark-bg, $lightness: 5%);
+  color: vars.$text-color;
   text-align: center;
-  font-family: $font-family-base;
-  font-size: 0.9rem;
-
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-
-    p {
-      margin: 0 0 0.5rem 0;
-      color: $text-muted;
-    }
-
-    small {
-      color: lighten($text-muted, 20%);
-      font-size: 0.8rem;
-      display: block;
-    }
-  }
+  padding: 1rem 2rem;
+  width: 100%;
 }

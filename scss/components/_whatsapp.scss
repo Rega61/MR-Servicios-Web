@@ -1,30 +1,30 @@
-@import '../mixins/variables';
-@import '../mixins/mixins';
+@use "../mixins/variables" as vars;
+@use "sass:color";
 
-.whatsapp-button {
+.whatsapp-float {
   position: fixed;
-  bottom: $spacing-lg;
-  right: $spacing-lg;
-  background-color: $whatsapp-green;
-  color: #fff;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366; // verde WhatsApp
+  color: #ffffff;
   border-radius: 50%;
-  width: 3.5rem;
-  height: 3.5rem;
-  @include flex-center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  font-size: 1.75rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   z-index: 1000;
-  @include transition(background-color, 0.3s);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
 
-  &:hover,
-  &:focus {
-    background-color: darken($whatsapp-green, 10%);
-    text-decoration: none;
-    outline: none;
+  img {
+    width: 35px;
+    height: 35px;
   }
 
-  i {
-    pointer-events: none; // Para que el icono no interfiera con el clic
+  &:hover {
+    background-color: color.adjust(#25D366, $lightness: -10%); // verde más oscuro al hover
+    transform: scale(1.1);
   }
 }

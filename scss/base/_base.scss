@@ -1,9 +1,27 @@
-@use '../mixins/variables' as vars;
+@use "../mixins/variables" as vars;
 
 body {
-  font-family: vars.$font-base;
+  background-color: vars.$dark-bg;
+  color: vars.$text-color;
+  font-family: vars.$font-primary;
+  font-size: vars.$font-size-base;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-  font-family: vars.$font-base;
+  color: vars.$accent-color;
+  text-decoration: none;
+
+  &:hover {
+    color: vars.$hover-accent;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem 0;
+}
+
+p {
+  line-height: 1.6;
 }
