@@ -39,7 +39,7 @@
 
   .row {
     .card {
-      background-color: vars.$dark-bg; // ahora usa variable existente
+      background-color: vars.$dark-bg;
       border: none;
       border-radius: 0.75rem;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -51,11 +51,22 @@
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
       }
 
-      img {
+      // Estilos para imágenes y carrusel
+      img,
+      .carousel-inner img {
         border-top-left-radius: 0.75rem;
         border-top-right-radius: 0.75rem;
-        height: 200px;
+        height: 300px; // altura base
         object-fit: cover;
+        width: 100%;
+
+        @media (min-width: 768px) {
+          height: 350px; // altura media en tablets
+        }
+
+        @media (min-width: 1200px) {
+          height: 400px; // altura máxima en desktop
+        }
       }
 
       .card-body {

@@ -333,11 +333,25 @@ button:hover, .btn:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
-#servicios .row .card img {
+#servicios .row .card img,
+#servicios .row .card .carousel-inner img {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #servicios .row .card img,
+  #servicios .row .card .carousel-inner img {
+    height: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  #servicios .row .card img,
+  #servicios .row .card .carousel-inner img {
+    height: 400px;
+  }
 }
 #servicios .row .card .card-body {
   padding: 1.5rem;
