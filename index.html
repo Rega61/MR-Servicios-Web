@@ -11,15 +11,17 @@
 <body>
 
 <header>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">MR Servicios</a>
+  <nav class="navbar navbar-fullwidth navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="img/logomr.jpeg" alt="MR Servicios Logo" class="logo me-2">
+        <span class="brand-highlight"></span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav mx-auto">
           <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="./pages/nosotros.html">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="./pages/proyectos.html">Servicios</a></li>
@@ -30,32 +32,59 @@
   </nav>
 </header>
 
-<!-- Sección de Bienvenida / Hero -->
-<section id="inicio" class="py-5 text-center">
-  <div class="container">
-    <h1 class="display-4">Bienvenido a MR Servicios</h1>
-    <p class="lead mt-3">
-      Soluciones confiables en electricidad, automatización industrial y sistemas de seguridad.
+
+<!-- Sección Hero / Bienvenida con carrusel -->
+<section id="inicio" class="hero-section text-center position-relative">
+  <!-- Carrusel de fondo -->
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./img/trabajo1.jpeg" class="d-block w-100" alt="Instalaciones eléctricas">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/trabajo2.jpeg" class="d-block w-100" alt="Automatización industrial">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/trabajo3.jpeg" class="d-block w-100" alt="Sistemas de seguridad">
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay oscuro -->
+  <div class="overlay"></div>
+
+  <!-- Contenido del Hero -->
+  <div class="container hero-content position-absolute top-50 start-50 translate-middle">
+    <h1 class="display-4 mb-3">
+      Bienvenido a <span class="highlight">MR Servicios</span>
+    </h1>
+
+    <p class="lead mb-3">
+      Soluciones confiables en <strong>electricidad</strong>, <strong>automatización industrial</strong> y <strong>sistemas de seguridad</strong>.
     </p>
-    <p>
-      En MR Servicios combinamos experiencia, tecnología y compromiso para brindar servicios de calidad a hogares, comercios e industrias en Laguna Paiva y alrededores.
+
+    <p class="mb-3">
+      En MR Servicios combinamos <strong>experiencia, tecnología y compromiso</strong> para brindar servicios de calidad a hogares, comercios e industrias en Laguna Paiva y alrededores.
     </p>
-    <p>
-      Descubrí nuestros servicios, conocé nuestro equipo y <a href="pages/contacto.html" class="text-decoration-none">contactanos</a> para que tu proyecto sea seguro y eficiente.
+
+    <p class="mb-4">
+      Descubrí nuestros servicios, conocé nuestro equipo y 
+      <a href="pages/contacto.html" class="btn-link">contactanos</a> para que tu proyecto sea <strong>seguro y eficiente</strong>.
     </p>
-    <a href="pages/servicios.html" class="btn btn-primary btn-lg mt-3">Ver nuestros servicios</a>
+
+    <div class="hero-buttons">
+      <a href="pages/servicios.html" class="btn btn-primary btn-lg me-3">Ver nuestros servicios</a>
+      <a href="pages/contacto.html" class="btn btn-outline-light btn-lg">Contactanos</a>
+    </div>
   </div>
 </section>
 
-<!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/5493421234567" target="_blank" class="whatsapp-float">
+
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/5493421234567" target="_blank" class="whatsapp-float">
   <img src="img/wpplogo.png" alt="WhatsApp" />
 </a>
-
-
-  <div class="main-content">
-    <!-- Aquí va el contenido principal de tu página -->
-  </div>
 
   <footer>
     <div class="container">

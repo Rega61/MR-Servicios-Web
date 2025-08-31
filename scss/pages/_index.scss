@@ -1,0 +1,108 @@
+@use "../mixins/variables" as vars;
+@use "sass:color";
+
+#inicio {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  color: vars.$text-color;
+
+  /* Carrusel de fondo */
+  .carousel-inner,
+  .carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  /* Overlay oscuro */
+  .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 1rem;
+
+    h1.display-4 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+
+      .highlight {
+        color: vars.$accent-color;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 3rem;
+      }
+    }
+
+    p.lead {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+
+      a {
+        color: vars.$accent-color;
+        text-decoration: none;
+
+        &:hover {
+          color: color.adjust(vars.$accent-color, $lightness: -10%);
+        }
+      }
+    }
+
+    .hero-buttons {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .btn {
+        padding: 0.75rem 2rem;
+        font-size: 1.1rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      .btn-primary {
+        background-color: vars.$accent-color;
+        border: none;
+        color: vars.$dark-bg;
+
+        &:hover {
+          background-color: vars.$hover-accent;
+        }
+      }
+
+      .btn-outline-light {
+        color: #fff;
+        border: 2px solid #fff;
+
+        &:hover {
+          background-color: #fff;
+          color: vars.$dark-bg;
+        }
+      }
+    }
+  }
+}

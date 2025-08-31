@@ -1,21 +1,48 @@
 @use "../mixins/variables" as vars;
 @use "sass:color";
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; // asegura que el footer siempre esté al final
-  margin: 0;
-}
-
-main {
-  flex: 1; // ocupa todo el espacio entre header y footer
-}
-
 footer {
   background-color: color.adjust(vars.$dark-bg, $lightness: 5%);
   color: vars.$text-color;
   text-align: center;
   padding: 1rem 2rem;
+  font-size: 0.9rem;
   width: 100%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.4;
+
+    a {
+      color: vars.$accent-color;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: vars.$hover-accent;
+      }
+    }
+  }
+
+  small {
+    color: color.adjust(vars.$text-color, $lightness: -20%);
+  }
+
+  @media (max-width: 576px) {
+    .container {
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    p, small {
+      font-size: 0.85rem;
+    }
+  }
 }
