@@ -7,11 +7,12 @@ header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(8px);
-  padding: 0.8rem 2rem;
-  transition: all 0.3s ease;
+  height: 65px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  transition: all 0.3s ease;
   z-index: 999;
   font-family: "Poppins", sans-serif;
 }
@@ -27,7 +28,7 @@ header {
 }
 .navbar .navbar-brand .logo {
   width: 65px;
-  height: auto;
+  height: 50px;
   object-fit: contain;
   margin-right: 0.5rem;
 }
