@@ -16,7 +16,7 @@ header {
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  justify-content: center; // 🔹 menú centrado
+  justify-content: center;
   z-index: 999;
   font-family: "Poppins", sans-serif;
 
@@ -24,7 +24,7 @@ header {
     display: flex;
     align-items: center;
     color: vars.$accent-color !important;
-    font-weight: 700; // 🔹 más grueso
+    font-weight: 700;
     font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -56,8 +56,8 @@ header {
     .nav-link {
       color: vars.$text-color !important;
       position: relative;
-      transition: color 0.3s ease;
-      font-weight: 600; // 🔹 más gruesitas
+      transition: all 0.3s ease;
+      font-weight: 600;
       letter-spacing: 0.5px;
 
       &::after {
@@ -73,6 +73,7 @@ header {
 
       &.active {
         color: vars.$accent-color !important;
+        text-shadow: 0 0 8px #F7D42C, 0 0 16px #F7D42C; // 🔹 resplandor amarillo
 
         &::after {
           width: 100%;

@@ -6,15 +6,26 @@
   <title>MR Servicios – Ingeniería y Electromecánica</title>
   <link rel="icon" type="image/png" href="../img/logomr.jpeg">
   
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Estilos propios -->
   <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <header>
-  <!-- Navbar full-width moderna -->
-  <nav class="navbar navbar-fullwidth navbar-expand-lg sticky-top">
+  <nav class="navbar navbar-fullwidth navbar-expand-lg sticky-top" data-aos="fade-down">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
         <img src="../img/logomr.jpeg" alt="MR Servicios Logo" class="logo me-2">
         <span class="brand-highlight"></span>
       </a>
@@ -23,7 +34,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="./proyectos.html">Servicios</a></li>
           <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
@@ -33,52 +44,114 @@
   </nav>
 </header>
 
+<!-- Sección Contacto -->
+<section id="contacto" class="py-5 text-light">
+  <div class="container">
+    <h1 class="text-center mb-4 fw-bold" data-aos="fade-down">Contacto</h1>
 
-  <!-- Sección Contacto -->
-  <section id="contacto" class="py-5">
-    <div class="container">
-      <h1 class="text-center mb-4">Contacto</h1>
-      <p class="text-center mb-5">
-        Para consultas, presupuestos o información sobre nuestros servicios, comunicate con nosotros a través de los siguientes medios:
-      </p>
+    <p class="text-center mb-5 fs-5" data-aos="fade-up" data-aos-delay="200">
+      Para consultas, presupuestos o más información sobre nuestros servicios,<br>
+      comunicate con nosotros a través de los siguientes medios:
+    </p>
 
-      <div class="row justify-content-center g-4">
-        <div class="col-md-6">
-          <div class="card p-4 text-center">
-            <h5>Teléfono / WhatsApp</h5>
-            <p><a href="https://wa.me/5493421234567" class="text-decoration-none">+54 9 342 123-4567</a></p>
+    <div class="row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="400">
+      <div class="col-lg-6">
+        <div class="card bg-secondary text-light p-4 shadow border-0 card-glow" data-aos="zoom-in" data-aos-delay="500">
+          <h4 class="fw-bold mb-3" data-aos="fade-right" data-aos-delay="600">Medios de Contacto</h4>
+
+          <p data-aos="fade-right" data-aos-delay="700">
+            <i class="bi bi-whatsapp text-success me-2"></i>
+            <a href="https://wa.me/5493421234567" target="_blank" class="text-decoration-none text-light">
+              +54 9 342 123-4567
+            </a>
+          </p>
+
+          <p data-aos="fade-right" data-aos-delay="800">
+            <i class="bi bi-envelope-fill text-primary me-2"></i>
+            <a href="mailto:info@mrservicios.com.ar" class="text-decoration-none text-light">
+              info@mrservicios.com.ar
+            </a>
+          </p>
+
+          <p data-aos="fade-right" data-aos-delay="900">
+            <i class="bi bi-geo-alt-fill text-danger me-2"></i>
+            Laguna Paiva, Santa Fe, Argentina
+          </p>
+
+          <p data-aos="fade-right" data-aos-delay="1000">
+            <i class="bi bi-clock-fill text-warning me-2"></i>
+            Horarios: Lun - Vie 8:00 a 18:00 hs
+          </p>
+
+          <div class="mt-4 text-center" data-aos="fade-up" data-aos-delay="1100">
+            <h5 class="fw-bold mb-3">Seguinos en redes</h5>
+            <div class="d-flex justify-content-center gap-3">
+              <a href="#" class="social-btn" data-aos="zoom-in" data-aos-delay="1200">
+                <img src="logos/facebook.png" alt="Facebook" class="social-logo">
+              </a>
+              <a href="#" class="social-btn" data-aos="zoom-in" data-aos-delay="1300">
+                <img src="logos/instagram.png" alt="Instagram" class="social-logo">
+              </a>
+              <a href="#" class="social-btn" data-aos="zoom-in" data-aos-delay="1400">
+                <img src="logos/linkedin.png" alt="LinkedIn" class="social-logo">
+              </a>
+              <a href="#" class="social-btn" data-aos="zoom-in" data-aos-delay="1500">
+                <img src="logos/twitter.png" alt="Twitter" class="social-logo">
+              </a>
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="card p-4 text-center">
-            <h5>Email</h5>
-            <p><a href="mailto:info@mrservicios.com.ar" class="text-decoration-none">info@mrservicios.com.ar</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mt-5">
-        <h5>Dirección</h5>
-        <p>Laguna Paiva, Santa Fe, Argentina</p>
-        <a href="https://www.google.com/maps/place/Laguna+Paiva" target="_blank" class="btn btn-primary">Ver en Google Maps</a>
       </div>
     </div>
-  </section>
 
-<!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/5493421234567" target="_blank" class="whatsapp-float">
+    <div class="row mt-5" data-aos="fade-up" data-aos-delay="1600">
+      <div class="col-12">
+        <div class="ratio ratio-16x9 shadow" data-aos="fade-up" data-aos-delay="1700">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3420.222..." 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/5493421234567" target="_blank" class="whatsapp-float" data-aos="zoom-in" data-aos-delay="1800">
   <img src="../img/wpplogo.png" alt="WhatsApp" />
 </a>
 
-
 <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>MR Servicios – Laguna Paiva | info@mrservicios.com.ar | +54 9 342 123-4567</p>
-      <small>&copy; 2025 MR Servicios. Todos los derechos reservados.</small>
-    </div>
-  </footer>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<footer>
+  <div class="container">
+    <p>MR Servicios – Laguna Paiva | info@mrservicios.com.ar | +54 9 342 123-4567</p>
+    <small>&copy; 2025 MR Servicios. Todos los derechos reservados.</small>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- AOS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
+  // Activar enlace activo en navbar
+  const currentLocation = location.href;
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    if (link.href === currentLocation) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+</script>
 </body>
 </html>

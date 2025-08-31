@@ -2,7 +2,7 @@
 @use "sass:color";
 
 #servicios {
-  background-color: vars.$dark-bg; // fondo oscuro de la sección
+  background-color: vars.$dark-bg; // fondo oscuro
   color: vars.$text-color;
   padding: 5rem 2rem;
   text-align: center;
@@ -12,24 +12,25 @@
     margin: 0 auto;
   }
 
+  // 🔹 Título principal
   h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 1rem;
-
-    @media (min-width: 768px) {
-      font-size: 3rem;
-    }
+    margin-bottom: 2rem;
+    color: #F7D42C;
   }
 
+  // 🔹 Párrafo introductorio
   p {
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
     color: vars.$text-color;
+    line-height: 1.6;
 
     a {
       color: vars.$accent-color;
       text-decoration: none;
+      transition: color 0.3s ease;
 
       &:hover {
         color: color.adjust(vars.$accent-color, $lightness: -10%);
@@ -37,36 +38,32 @@
     }
   }
 
+  // 🔹 Cards de servicios
   .row {
     .card {
       background-color: vars.$dark-bg;
       border: none;
       border-radius: 0.75rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
       transition: transform 0.3s, box-shadow 0.3s;
       color: vars.$text-color;
 
       &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.5);
       }
 
-      // Estilos para imágenes y carrusel
+      // 🔹 Imagen de la card o carrusel
       img,
       .carousel-inner img {
         border-top-left-radius: 0.75rem;
         border-top-right-radius: 0.75rem;
-        height: 300px; // altura base
+        height: 300px;
         object-fit: cover;
         width: 100%;
 
-        @media (min-width: 768px) {
-          height: 350px; // altura media en tablets
-        }
-
-        @media (min-width: 1200px) {
-          height: 400px; // altura máxima en desktop
-        }
+        @media (min-width: 768px) { height: 350px; }
+        @media (min-width: 1200px) { height: 400px; }
       }
 
       .card-body {
@@ -87,6 +84,7 @@
     }
   }
 
+  // 🔹 Botón de acción
   .btn {
     background-color: vars.$accent-color;
     color: vars.$dark-bg;
@@ -100,6 +98,16 @@
     &:hover {
       background-color: vars.$hover-accent;
       transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
     }
+  }
+
+  // 🔹 Responsive
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
+
+    h1 { font-size: 2rem; }
+    p { font-size: 1rem; }
+    .card { padding: 1rem; }
   }
 }

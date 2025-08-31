@@ -47,7 +47,7 @@ header {
 .navbar .navbar-nav .nav-link {
   color: #ffffff !important;
   position: relative;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
@@ -63,6 +63,7 @@ header {
 }
 .navbar .navbar-nav .nav-link.active {
   color: #F7D42C !important;
+  text-shadow: 0 0 8px #F7D42C, 0 0 16px #F7D42C;
 }
 .navbar .navbar-nav .nav-link.active::after {
   width: 100%;
@@ -305,21 +306,19 @@ button:hover, .btn:hover {
 #servicios h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
-}
-@media (min-width: 768px) {
-  #servicios h1 {
-    font-size: 3rem;
-  }
+  margin-bottom: 2rem;
+  color: #F7D42C;
 }
 #servicios p {
   font-size: 1.1rem;
   margin-bottom: 2.5rem;
   color: #ffffff;
+  line-height: 1.6;
 }
 #servicios p a {
   color: #F7D42C;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 #servicios p a:hover {
   color: rgb(231.2328767123, 192.8767123288, 8.7671232877);
@@ -382,6 +381,21 @@ button:hover, .btn:hover {
 #servicios .btn:hover {
   background-color: rgb(231.2328767123, 192.8767123288, 8.7671232877);
   transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  #servicios {
+    padding: 3rem 1rem;
+  }
+  #servicios h1 {
+    font-size: 2rem;
+  }
+  #servicios p {
+    font-size: 1rem;
+  }
+  #servicios .card {
+    padding: 1rem;
+  }
 }
 
 #contacto {
@@ -398,6 +412,7 @@ button:hover, .btn:hover {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: #F7D42C;
 }
 @media (min-width: 768px) {
   #contacto h1 {
@@ -471,6 +486,95 @@ button:hover, .btn:hover {
   font-size: 1rem;
   margin-bottom: 1rem;
   color: #ffffff;
+}
+
+#nosotros {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+#nosotros .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#nosotros h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #F7D42C;
+}
+#nosotros p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+#nosotros p a {
+  color: #F7D42C;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+#nosotros p a:hover {
+  color: rgb(245.9369863014, 206.2863013699, 15.9630136986);
+}
+#nosotros .row .card {
+  background-color: #121212;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  color: #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 15px 5px rgba(247, 212, 44, 0.5);
+}
+#nosotros .row .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 25px 8px rgba(247, 212, 44, 0.7);
+}
+#nosotros .row .card h4, #nosotros .row .card h5 {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #FFC107;
+}
+#nosotros .row .card p {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+#nosotros .row .card i {
+  margin-bottom: 1rem;
+}
+#nosotros .btn {
+  background-color: #F7D42C;
+  color: #121212;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+#nosotros .btn:hover {
+  background-color: rgb(231.2328767123, 192.8767123288, 8.7671232877);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  #nosotros {
+    padding: 3rem 1rem;
+  }
+  #nosotros h1 {
+    font-size: 2rem;
+  }
+  #nosotros .card {
+    padding: 1.5rem;
+  }
+  #nosotros .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MR Servicios – Ingeniería y Electromecánica</title>
+  <title>MR Servicios</title>
   <link rel="icon" type="image/png" href="../img/logomr.jpeg">
 
+  <!-- Fuentes y Bootstrap -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
 <header>
-  <!-- Navbar full-width moderna -->
   <nav class="navbar navbar-fullwidth navbar-expand-lg sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <a class="navbar-brand d-flex align-items-center" href="../index.html">
         <img src="../img/logomr.jpeg" alt="MR Servicios Logo" class="logo me-2">
         <span class="brand-highlight"></span>
       </a>
@@ -26,7 +29,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="proyectos.html">Servicios</a></li>
           <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
@@ -36,93 +39,112 @@
   </nav>
 </header>
 
-
-<!-- Sección Nosotros -->
 <!-- Sección Nosotros -->
 <section id="nosotros" class="py-5">
   <div class="container">
-    <!-- Título -->
-    <h1 class="text-center mb-4">Sobre Nosotros</h1>
-    <p class="text-center mb-5">
+    <!-- Título principal -->
+    <h1 class="text-center mb-4" data-aos="fade-down">Sobre Nosotros</h1>
+    <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="200">
       MR Servicios es una empresa ubicada en <strong>Laguna Paiva</strong> dedicada a brindar soluciones profesionales en 
-      <strong>electricidad, automatización industrial y sistemas de seguridad</strong>. 
-      Contamos con un equipo especializado, comprometido con la calidad y la satisfacción de nuestros clientes.
+      <strong>electricidad, automatización industrial y sistemas de seguridad</strong>. Contamos con un equipo especializado y comprometido con la satisfacción de nuestros clientes.
     </p>
 
-    <!-- Misión y Visión con iconos -->
+    <!-- Misión y Visión con cards -->
     <div class="row g-4 text-center">
-      <div class="col-md-6">
-        <i class="bi bi-lightning-charge-fill display-4 text-warning mb-3"></i>
-        <h4>Misión</h4>
-        <p>
-          Brindar servicios confiables y seguros que mejoren la eficiencia y seguridad de hogares, comercios e industrias, 
-          combinando experiencia y tecnología.
-        </p>
+      <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+        <div class="card shadow h-100 p-4 card-glow">
+          <i class="bi bi-lightning-charge-fill display-4 text-warning mb-3"></i>
+          <h4 data-aos="fade-up" data-aos-delay="100">Misión</h4>
+          <p data-aos="fade-up" data-aos-delay="200">
+            Brindar servicios confiables y seguros que mejoren la eficiencia y seguridad de hogares, comercios e industrias, combinando experiencia y tecnología.
+          </p>
+        </div>
       </div>
-      <div class="col-md-6">
-        <i class="bi bi-eye-fill display-4 text-primary mb-3"></i>
-        <h4>Visión</h4>
-        <p>
-          Ser reconocidos como líderes locales en soluciones eléctricas, automatización y sistemas de seguridad, 
-          destacándonos por nuestra profesionalidad y compromiso.
-        </p>
+      <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
+        <div class="card shadow h-100 p-4 card-glow">
+          <i class="bi bi-eye-fill display-4 text-primary mb-3"></i>
+          <h4 data-aos="fade-up" data-aos-delay="100">Visión</h4>
+          <p data-aos="fade-up" data-aos-delay="200">
+            Ser reconocidos como líderes locales en soluciones eléctricas, automatización y sistemas de seguridad, destacándonos por nuestra profesionalidad y compromiso.
+          </p>
+        </div>
       </div>
     </div>
 
-    <!-- Valores -->
+    <!-- Valores con cards -->
     <div class="row g-4 mt-5 text-center">
-      <h3 class="mb-4">Nuestros Valores</h3>
-      <div class="col-md-4">
-        <i class="bi bi-shield-check display-5 text-success mb-2"></i>
-        <h5>Confianza</h5>
-        <p>Generamos relaciones basadas en la transparencia y el compromiso con cada cliente.</p>
+      <h3 class="mb-4" data-aos="fade-up">Nuestros Valores</h3>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card shadow h-100 p-3 card-glow">
+          <i class="bi bi-shield-check display-5 text-success mb-2"></i>
+          <h5 data-aos="fade-up" data-aos-delay="100">Confianza</h5>
+          <p data-aos="fade-up" data-aos-delay="200">Generamos relaciones basadas en la transparencia y el compromiso con cada cliente.</p>
+        </div>
       </div>
-      <div class="col-md-4">
-        <i class="bi bi-cpu-fill display-5 text-info mb-2"></i>
-        <h5>Innovación</h5>
-        <p>Aplicamos tecnología y soluciones modernas para optimizar cada proyecto.</p>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card shadow h-100 p-3 card-glow">
+          <i class="bi bi-cpu-fill display-5 text-info mb-2"></i>
+          <h5 data-aos="fade-up" data-aos-delay="100">Innovación</h5>
+          <p data-aos="fade-up" data-aos-delay="200">Aplicamos tecnología y soluciones modernas para optimizar cada proyecto.</p>
+        </div>
       </div>
-      <div class="col-md-4">
-        <i class="bi bi-people-fill display-5 text-danger mb-2"></i>
-        <h5>Trabajo en Equipo</h5>
-        <p>Creemos en la colaboración y la capacitación constante de nuestro personal.</p>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card shadow h-100 p-3 card-glow">
+          <i class="bi bi-people-fill display-5 text-danger mb-2"></i>
+          <h5 data-aos="fade-up" data-aos-delay="100">Trabajo en Equipo</h5>
+          <p data-aos="fade-up" data-aos-delay="200">Creemos en la colaboración y la capacitación constante de nuestro personal.</p>
+        </div>
       </div>
     </div>
 
-    <!-- Imagen lateral (opcional) -->
+    <!-- Imagen lateral -->
     <div class="row align-items-center mt-5">
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="fade-right">
         <img src="../img/equipo.jpg" alt="Nuestro Equipo" class="img-fluid rounded shadow">
       </div>
-      <div class="col-md-6">
-        <h3 class="mb-3">¿Por qué elegirnos?</h3>
+      <div class="col-md-6" data-aos="fade-left">
+        <h3 data-aos="fade-up" class="mb-3">¿Por qué elegirnos?</h3>
         <ul class="list-unstyled">
-          <li><i class="bi bi-check-circle-fill text-success"></i> Experiencia en proyectos residenciales e industriales.</li>
-          <li><i class="bi bi-check-circle-fill text-success"></i> Atención personalizada y soporte técnico confiable.</li>
-          <li><i class="bi bi-check-circle-fill text-success"></i> Compromiso con la seguridad y las normativas vigentes.</li>
-          <li><i class="bi bi-check-circle-fill text-success"></i> Soluciones adaptadas a cada cliente.</li>
+          <li data-aos="fade-up" data-aos-delay="100"><i class="bi bi-check-circle-fill text-success"></i> Experiencia en proyectos residenciales e industriales.</li>
+          <li data-aos="fade-up" data-aos-delay="200"><i class="bi bi-check-circle-fill text-success"></i> Atención personalizada y soporte técnico confiable.</li>
+          <li data-aos="fade-up" data-aos-delay="300"><i class="bi bi-check-circle-fill text-success"></i> Compromiso con la seguridad y las normativas vigentes.</li>
+          <li data-aos="fade-up" data-aos-delay="400"><i class="bi bi-check-circle-fill text-success"></i> Soluciones adaptadas a cada cliente.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Botón flotante de WhatsApp -->
+<!-- Botón flotante WhatsApp -->
 <a href="https://wa.me/5493421234567" target="_blank" class="whatsapp-float">
   <img src="../img/wpplogo.png" alt="WhatsApp" />
 </a>
 
-
-
 <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>MR Servicios – Laguna Paiva | info@mrservicios.com.ar | +54 9 342 123-4567</p>
-      <small>&copy; 2025 MR Servicios. Todos los derechos reservados.</small>
-    </div>
-  </footer>
+<footer>
+  <div class="container">
+    <p>MR Servicios – Laguna Paiva | info@mrservicios.com.ar | +54 9 342 123-4567</p>
+    <small>&copy; 2025 MR Servicios. Todos los derechos reservados.</small>
+  </div>
+</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true, easing: 'ease-out-cubic' });
+
+  // Activar enlace activo en navbar
+  const currentLocation = location.href;
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    if (link.href === currentLocation) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+</script>
 </body>
 </html>

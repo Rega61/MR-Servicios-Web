@@ -1,0 +1,109 @@
+@use "../mixins/variables" as vars;
+@use "sass:color";
+
+// 🔹 Mixin de texto estándar
+@mixin text-default($size: 1rem) {
+  font-size: $size;
+  color: vars.$text-color;
+  line-height: 1.6;
+}
+
+#nosotros {
+  background-color: vars.$dark-bg;
+  color: vars.$text-color;
+  padding: 5rem 2rem;
+  text-align: center;
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  // 🔹 Título principal
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #F7D42C; // amarillo
+  }
+
+  // 🔹 Párrafo introductorio
+  p {
+    @include text-default(1.1rem);
+    margin-bottom: 2.5rem;
+
+    a {
+      color: vars.$accent-color;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover { color: color.scale(vars.$accent-color, $lightness: -10%); }
+    }
+  }
+
+  // 🔹 Cards (Misión, Visión, Valores) con contorno tipo luz
+  .row {
+    .card {
+      background-color: vars.$dark-bg;
+      border: none;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      color: vars.$text-color;
+      transition: transform 0.3s, box-shadow 0.3s;
+
+      // 🔹 Sombra normal + luz amarilla
+      box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.3), 
+        0 0 15px 5px rgba(247, 212, 44, 0.5);
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 
+          0 8px 25px rgba(0, 0, 0, 0.5), 
+          0 0 25px 8px rgba(247, 212, 44, 0.7);
+      }
+
+      h4, h5 {
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: #FFC107; // títulos en amarillo
+      }
+
+      p {
+        @include text-default();
+        margin-bottom: 0;
+      }
+
+      i {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  // 🔹 Botón
+  .btn {
+    background-color: vars.$accent-color;
+    color: vars.$dark-bg;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: vars.$hover-accent;
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    }
+  }
+
+  // 🔹 Responsive extra
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
+    h1 { font-size: 2rem; }
+    .card { padding: 1.5rem; }
+    .btn { font-size: 1rem; padding: 0.6rem 1.5rem; }
+  }
+}
