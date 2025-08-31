@@ -10,14 +10,13 @@ header {
 // Navbar full-width y moderna
 .navbar {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.85); // semitransparente
+  background-color: rgba(0, 0, 0, 0.85); // semitransparente desktop
   backdrop-filter: blur(8px);
-  height: 65px; // altura aproximada del logo
-  display: flex;
-  align-items: center; // centra verticalmente
-  justify-content: space-between;
-  padding: 0 2rem; // solo padding horizontal
+  padding: 0.5rem 0.5rem; // navbar más baja
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 999;
   font-family: "Poppins", sans-serif;
 
@@ -33,7 +32,7 @@ header {
 
     .logo {
       width: 65px;
-      height: 50px; // altura fija para logo
+      height: auto;
       object-fit: contain;
       margin-right: 0.5rem;
     }
@@ -138,6 +137,11 @@ header {
     @media (min-width: 992px) {
       display: none; // oculto en pantallas grandes
     }
+  }
+
+  // Fondo sólido en móviles
+  @media (max-width: 991px) {
+    background-color: #000; // negro sólido en móviles
   }
 }
 
