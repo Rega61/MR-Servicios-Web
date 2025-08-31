@@ -77,9 +77,41 @@ header {
 .navbar .navbar-toggler {
   border: none;
   outline: none;
+  width: 35px;
+  height: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  padding: 0;
 }
-.navbar .navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#F7D42C' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+.navbar .navbar-toggler span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #F7D42C;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+  transform-origin: left center;
+}
+.navbar .navbar-toggler.collapsed span:nth-child(1) {
+  transform: rotate(0deg) translate(0, 0);
+}
+.navbar .navbar-toggler.collapsed span:nth-child(2) {
+  opacity: 1;
+}
+.navbar .navbar-toggler.collapsed span:nth-child(3) {
+  transform: rotate(0deg) translate(0, 0);
+}
+.navbar .navbar-toggler:not(.collapsed) span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.navbar .navbar-toggler:not(.collapsed) span:nth-child(2) {
+  opacity: 0;
+}
+.navbar .navbar-toggler:not(.collapsed) span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .sticky-top {

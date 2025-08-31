@@ -73,7 +73,7 @@ header {
 
       &.active {
         color: vars.$accent-color !important;
-        text-shadow: 0 0 8px #F7D42C, 0 0 16px #F7D42C; // 🔹 resplandor amarillo
+        text-shadow: 0 0 8px #F7D42C, 0 0 16px #F7D42C;
 
         &::after {
           width: 100%;
@@ -90,12 +90,47 @@ header {
     }
   }
 
+  // Navbar toggler animado
   .navbar-toggler {
     border: none;
     outline: none;
+    width: 35px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: transparent;
+    padding: 0;
 
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='" + vars.$accent-color + "' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: vars.$accent-color;
+      border-radius: 2px;
+      transition: all 0.4s ease;
+      transform-origin: left center;
+    }
+
+    &.collapsed span:nth-child(1) {
+      transform: rotate(0deg) translate(0, 0);
+    }
+    &.collapsed span:nth-child(2) {
+      opacity: 1;
+    }
+    &.collapsed span:nth-child(3) {
+      transform: rotate(0deg) translate(0, 0);
+    }
+
+    &:not(.collapsed) span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    &:not(.collapsed) span:nth-child(2) {
+      opacity: 0;
+    }
+    &:not(.collapsed) span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
     }
   }
 }
