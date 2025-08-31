@@ -90,8 +90,9 @@ header {
     }
   }
 
-  // Navbar toggler animado
+  // Navbar toggler animado solo visible en móviles
   .navbar-toggler {
+    display: block; // visible en móviles
     border: none;
     outline: none;
     width: 35px;
@@ -131,6 +132,10 @@ header {
     }
     &:not(.collapsed) span:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    @media (min-width: 992px) {
+      display: none; // oculto en pantallas grandes
     }
   }
 }

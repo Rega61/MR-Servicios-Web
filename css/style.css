@@ -75,6 +75,7 @@ header {
   width: 100%;
 }
 .navbar .navbar-toggler {
+  display: block;
   border: none;
   outline: none;
   width: 35px;
@@ -112,6 +113,11 @@ header {
 }
 .navbar .navbar-toggler:not(.collapsed) span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+@media (min-width: 992px) {
+  .navbar .navbar-toggler {
+    display: none;
+  }
 }
 
 .sticky-top {
