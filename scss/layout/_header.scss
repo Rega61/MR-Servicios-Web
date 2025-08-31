@@ -16,15 +16,16 @@ header {
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; // 🔹 menú centrado
   z-index: 999;
+  font-family: "Poppins", sans-serif;
 
   .navbar-brand {
     display: flex;
     align-items: center;
     color: vars.$accent-color !important;
-    font-weight: bold;
-    font-size: 1.5rem;
+    font-weight: 700; // 🔹 más grueso
+    font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s ease;
@@ -56,6 +57,8 @@ header {
       color: vars.$text-color !important;
       position: relative;
       transition: color 0.3s ease;
+      font-weight: 600; // 🔹 más gruesitas
+      letter-spacing: 0.5px;
 
       &::after {
         content: "";
