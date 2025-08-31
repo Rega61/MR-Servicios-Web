@@ -7,12 +7,11 @@ header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(8px);
-  height: 65px;
+  padding: 0.5rem 0.5rem;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  transition: all 0.3s ease;
+  justify-content: center;
   z-index: 999;
   font-family: "Poppins", sans-serif;
 }
@@ -28,7 +27,7 @@ header {
 }
 .navbar .navbar-brand .logo {
   width: 65px;
-  height: 50px;
+  height: auto;
   object-fit: contain;
   margin-right: 0.5rem;
 }
@@ -118,6 +117,11 @@ header {
 @media (min-width: 992px) {
   .navbar .navbar-toggler {
     display: none;
+  }
+}
+@media (max-width: 991px) {
+  .navbar {
+    background-color: #000;
   }
 }
 
