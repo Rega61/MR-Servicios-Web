@@ -16,7 +16,7 @@
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #F7D42C;
+    color: #FFD700; // título amarillo
 
     @media (min-width: 768px) {
       font-size: 3rem;
@@ -39,18 +39,28 @@
   }
 
   .row {
+    justify-content: center;
+
     .card {
-      background-color: vars.$dark-bg;
+      background-color: #000; // tarjeta negra
       border: none;
       border-radius: 0.75rem;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       padding: 2rem;
       transition: transform 0.3s, box-shadow 0.3s;
       color: vars.$text-color;
+      max-width: 100%;
 
       &:hover {
         transform: translateY(-8px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      }
+
+      h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: vars.$accent-color;
       }
 
       h5 {
@@ -67,8 +77,29 @@
 
         a {
           color: vars.$accent-color;
+
           &:hover {
             color: color.adjust(vars.$accent-color, $lightness: -10%);
+          }
+        }
+
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+
+      .d-flex {
+        flex-wrap: wrap; // redes sociales flexibles
+        justify-content: center;
+        gap: 1rem;
+
+        .social-logo {
+          width: 40px;
+          height: 40px;
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: scale(1.2);
           }
         }
       }
@@ -103,5 +134,25 @@
     font-size: 1rem;
     margin-bottom: 1rem;
     color: vars.$text-color;
+  }
+
+  // Botón flotante WhatsApp
+  .whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+    transition: transform 0.3s;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }

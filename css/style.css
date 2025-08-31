@@ -412,7 +412,7 @@ button:hover, .btn:hover {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #F7D42C;
+  color: #FFD700;
 }
 @media (min-width: 768px) {
   #contacto h1 {
@@ -431,18 +431,28 @@ button:hover, .btn:hover {
 #contacto p a:hover {
   color: rgb(231.2328767123, 192.8767123288, 8.7671232877);
 }
+#contacto .row {
+  justify-content: center;
+}
 #contacto .row .card {
-  background-color: #121212;
+  background-color: #000;
   border: none;
   border-radius: 0.75rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   padding: 2rem;
   transition: transform 0.3s, box-shadow 0.3s;
   color: #ffffff;
+  max-width: 100%;
 }
 #contacto .row .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+#contacto .row .card h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #F7D42C;
 }
 #contacto .row .card h5 {
   font-size: 1.2rem;
@@ -460,6 +470,22 @@ button:hover, .btn:hover {
 }
 #contacto .row .card p a:hover {
   color: rgb(231.2328767123, 192.8767123288, 8.7671232877);
+}
+#contacto .row .card p i {
+  margin-right: 0.5rem;
+}
+#contacto .row .card .d-flex {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+#contacto .row .card .d-flex .social-logo {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+#contacto .row .card .d-flex .social-logo:hover {
+  transform: scale(1.2);
 }
 #contacto .btn {
   background-color: #F7D42C;
@@ -486,6 +512,22 @@ button:hover, .btn:hover {
   font-size: 1rem;
   margin-bottom: 1rem;
   color: #ffffff;
+}
+#contacto .whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  z-index: 100;
+  transition: transform 0.3s;
+}
+#contacto .whatsapp-float img {
+  width: 100%;
+  height: 100%;
+}
+#contacto .whatsapp-float:hover {
+  transform: scale(1.2);
 }
 
 #nosotros {
