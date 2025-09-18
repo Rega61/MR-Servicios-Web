@@ -2,29 +2,16 @@
 @use "sass:color";
 
 #contacto {
-<<<<<<< HEAD
-  background-color: vars.$dark-bg;
-=======
   background: linear-gradient(to bottom, vars.$dark-bg, color.adjust(vars.$dark-bg, $lightness: 10%));
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   color: vars.$text-color;
   padding: 5rem 2rem;
-  text-align: center;
-
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
 
   h1 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-<<<<<<< HEAD
-    color: #FFD700; // título amarillo
-=======
     color: #FFD700;
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
+    text-align: center;
 
     @media (min-width: 768px) {
       font-size: 3rem;
@@ -34,152 +21,79 @@
   p {
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
-<<<<<<< HEAD
-    color: vars.$text-color;
-=======
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
+    text-align: center;
 
     a {
       color: vars.$accent-color;
       text-decoration: none;
-<<<<<<< HEAD
-=======
       transition: color 0.3s;
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 
       &:hover {
         color: color.adjust(vars.$accent-color, $lightness: -10%);
       }
     }
-  }
 
-  .row {
-    justify-content: center;
-
-    .card {
-<<<<<<< HEAD
-      background-color: #000; // tarjeta negra
-      border: none;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      padding: 2rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-      color: vars.$text-color;
-      max-width: 100%;
+    i {
+      font-size: 1.25rem;
+      margin-right: 0.5rem;
+      transition: transform 0.3s, color 0.3s;
 
       &:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-      }
-
-      h4 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        color: vars.$accent-color;
-      }
-
-      h5 {
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 0.75rem;
-        color: vars.$accent-color;
-      }
-
-      p {
-        font-size: 1rem;
-        margin-bottom: 0;
-        color: vars.$text-color;
-
-        a {
-          color: vars.$accent-color;
-
-          &:hover {
-            color: color.adjust(vars.$accent-color, $lightness: -10%);
-          }
-        }
-
-        i {
-          margin-right: 0.5rem;
-        }
-      }
-
-      .d-flex {
-        flex-wrap: wrap; // redes sociales flexibles
-=======
-      background: rgba(0,0,0,0.7);
-      border: none;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      padding: 2rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-
-      &:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
-      }
-
-      h4, h5 {
-        color: vars.$accent-color;
-      }
-
-      p i {
-        margin-right: 0.5rem;
-      }
-
-      .d-flex {
-        flex-wrap: wrap;
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
-        justify-content: center;
-        gap: 1rem;
-
-        .social-logo {
-          width: 40px;
-          height: 40px;
-          transition: transform 0.3s;
-
-          &:hover {
-            transform: scale(1.2);
-          }
-        }
+        transform: scale(1.2) rotate(-10deg);
+        color: color.adjust(vars.$accent-color, $lightness: -15%);
       }
     }
   }
 
-<<<<<<< HEAD
-  .btn {
-    background-color: vars.$accent-color;
-    color: vars.$dark-bg;
+  .card-glow {
+    background: rgba(0,0,0,0.7);
     border: none;
-    padding: 0.75rem 2rem;
-    border-radius: 0.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin-top: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    padding: 2rem;
+    color: vars.$text-color;
+    transition: transform 0.3s, box-shadow 0.3s;
 
     &:hover {
-      background-color: vars.$hover-accent;
-      transform: scale(1.05);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+    }
+
+    h4, h5 {
+      color: vars.$accent-color;
+    }
+
+    // Redes sociales
+    .d-flex {
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      .social-logo {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        transition: transform 0.3s, background 0.3s;
+
+        &:hover {
+          transform: scale(1.2);
+          background: rgba(255,255,255,0.25);
+        }
+
+        img {
+          width: 60%;
+          height: 60%;
+          object-fit: contain;
+        }
+      }
     }
   }
 
-  .text-center h5 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: vars.$accent-color;
-  }
-
-  .text-center p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: vars.$text-color;
-  }
-
-  // Botón flotante WhatsApp
-=======
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
+  // WhatsApp flotante
   .whatsapp-float {
     position: fixed;
     bottom: 2rem;
@@ -187,21 +101,41 @@
     width: 60px;
     height: 60px;
     z-index: 100;
-<<<<<<< HEAD
-=======
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
     transition: transform 0.3s;
 
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
 
     &:hover {
       transform: scale(1.2);
+    }
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
+
+    h1 { font-size: 2rem; }
+    p { font-size: 1rem; }
+
+    .d-flex {
+      justify-content: center;
+    }
+
+    .social-logo {
+      width: 35px;
+      height: 35px;
+
+      img {
+        width: 60%;
+        height: 60%;
+      }
     }
   }
 }

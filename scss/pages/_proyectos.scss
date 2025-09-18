@@ -2,26 +2,16 @@
 @use "sass:color";
 
 #servicios {
-<<<<<<< HEAD
-  background-color: vars.$dark-bg; // fondo oscuro
-=======
-  background-color: vars.$dark-bg; 
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
+  background-color: vars.$dark-bg;
   color: vars.$text-color;
   padding: 5rem 2rem;
   text-align: center;
 
-<<<<<<< HEAD
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  .container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
   }
 
-  // 🔹 Título principal
-=======
-  .container { max-width: 1200px; margin: 0 auto; }
-
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   h1 {
     font-size: 2.5rem;
     font-weight: bold;
@@ -29,16 +19,11 @@
     color: #F7D42C;
   }
 
-<<<<<<< HEAD
-  // 🔹 Párrafo introductorio
-=======
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   p {
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
     color: vars.$text-color;
     line-height: 1.6;
-<<<<<<< HEAD
 
     a {
       color: vars.$accent-color;
@@ -51,50 +36,7 @@
     }
   }
 
-  // 🔹 Cards de servicios
-  .row {
-    .card {
-      background-color: vars.$dark-bg;
-      border: none;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
-      color: vars.$text-color;
-
-      &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-      }
-
-      // 🔹 Imagen de la card o carrusel
-      img,
-      .carousel-inner img {
-        border-top-left-radius: 0.75rem;
-        border-top-right-radius: 0.75rem;
-        height: 300px;
-        object-fit: cover;
-        width: 100%;
-
-        @media (min-width: 768px) { height: 350px; }
-        @media (min-width: 1200px) { height: 400px; }
-      }
-
-      .card-body {
-        padding: 1.5rem;
-
-        .card-title {
-          font-size: 1.25rem;
-          font-weight: 600;
-          margin-bottom: 0.75rem;
-          color: vars.$accent-color;
-        }
-
-        .card-text {
-          font-size: 0.95rem;
-          color: vars.$text-color;
-=======
-  }
-
+  // Cards de servicios
   main.services-cards {
     display: flex;
     flex-wrap: wrap;
@@ -136,19 +78,19 @@
         left: 0;
         width: 100%;
         height: 40%;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.925), transparent); // fondo inicial semi-transparente
+        background: linear-gradient(to top, rgba(0,0,0,0.925), transparent);
         display: flex;
         align-items: flex-end;
         justify-content: center;
         text-align: center;
         padding: 1.5rem;
         opacity: 0;
-        transition: opacity 0.5s, background 0.3s; // animación de fondo y opacidad 
+        transition: opacity 0.5s, background 0.3s;
       }
 
       &:hover .layer {
         opacity: 1;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.914), transparent); // se oscurece al hover
+        background: linear-gradient(to top, rgba(0,0,0,0.914), transparent);
       }
 
       .info {
@@ -164,14 +106,12 @@
           font-size: 0.95rem;
           line-height: 1.4;
           margin-bottom: 0;
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
         }
       }
     }
   }
 
-<<<<<<< HEAD
-  // 🔹 Botón de acción
+  // Botón de acción
   .btn {
     background-color: vars.$accent-color;
     color: vars.$dark-bg;
@@ -189,17 +129,12 @@
     }
   }
 
-  // 🔹 Responsive
-=======
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
+  // Responsive
   @media (max-width: 768px) {
     padding: 3rem 1rem;
 
     h1 { font-size: 2rem; }
     p { font-size: 1rem; }
-<<<<<<< HEAD
-    .card { padding: 1rem; }
-=======
 
     main.services-cards {
       flex-direction: column;
@@ -211,6 +146,5 @@
         .carousel-inner img { height: 200px; }
       }
     }
->>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   }
 }
