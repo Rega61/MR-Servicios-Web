@@ -257,6 +257,7 @@ button:hover, .btn:hover {
 #inicio .carousel-item img {
   height: 100vh;
   object-fit: cover;
+<<<<<<< HEAD
 }
 #inicio .overlay {
   position: absolute;
@@ -266,6 +267,16 @@ button:hover, .btn:hover {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
+=======
+  transition: transform 1s ease;
+}
+#inicio .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  transition: background-color 0.5s ease;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 }
 #inicio .hero-content {
   position: absolute;
@@ -275,6 +286,12 @@ button:hover, .btn:hover {
   z-index: 2;
   max-width: 900px;
   padding: 0 1rem;
+<<<<<<< HEAD
+=======
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 }
 #inicio .hero-content h1.display-4 {
   font-size: 2.5rem;
@@ -299,6 +316,10 @@ button:hover, .btn:hover {
 #inicio .hero-content p a {
   color: #F7D42C;
   text-decoration: none;
+<<<<<<< HEAD
+=======
+  transition: color 0.3s ease;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 }
 #inicio .hero-content p a:hover {
   color: rgb(231.2328767123, 192.8767123288, 8.7671232877);
@@ -314,7 +335,11 @@ button:hover, .btn:hover {
   padding: 0.75rem 2rem;
   font-size: 1.1rem;
   border-radius: 0.5rem;
+<<<<<<< HEAD
   transition: all 0.3s ease;
+=======
+  transition: transform 0.3s ease;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 }
 #inicio .hero-content .hero-buttons .btn:hover {
   transform: scale(1.05);
@@ -336,6 +361,107 @@ button:hover, .btn:hover {
   color: #121212;
 }
 
+<<<<<<< HEAD
+=======
+.logo {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: zoomIn 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.services-cards .card {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 350px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #121212;
+  border: none;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.services-cards .card .carousel-inner img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.services-cards .card:hover .carousel-inner img {
+  transform: scale(1.1);
+}
+.services-cards .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(247, 212, 44, 0.6);
+}
+.services-cards .card .layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease, background-color 0.4s ease;
+}
+.services-cards .card:hover .layer {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.services-cards .card .info {
+  color: #fff;
+}
+.services-cards .card .info h1 {
+  font-size: 1.5rem;
+  color: #F7D42C;
+  margin-bottom: 0.5rem;
+}
+.services-cards .card .info p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+@media (max-width: 768px) {
+  .services-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .services-cards .card {
+    max-width: 90%;
+  }
+  .services-cards .card .carousel-inner img {
+    height: 200px;
+  }
+}
+
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 #servicios {
   background-color: #121212;
   color: #ffffff;
@@ -358,6 +484,7 @@ button:hover, .btn:hover {
   color: #ffffff;
   line-height: 1.6;
 }
+<<<<<<< HEAD
 #servicios p a {
   color: #F7D42C;
   text-decoration: none;
@@ -425,6 +552,69 @@ button:hover, .btn:hover {
   background-color: rgb(231.2328767123, 192.8767123288, 8.7671232877);
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+=======
+#servicios main.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+#servicios main.services-cards .card {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 350px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #121212;
+  border: none;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+#servicios main.services-cards .card .carousel-inner img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+#servicios main.services-cards .card:hover .carousel-inner img {
+  transform: scale(1.1);
+}
+#servicios main.services-cards .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px #F7D42C;
+}
+#servicios main.services-cards .card .layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.925), transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.5s, background 0.3s;
+}
+#servicios main.services-cards .card:hover .layer {
+  opacity: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.914), transparent);
+}
+#servicios main.services-cards .card .info {
+  color: #fff;
+}
+#servicios main.services-cards .card .info h1 {
+  font-size: 1.5rem;
+  color: #F7D42C;
+  margin-bottom: 0.5rem;
+}
+#servicios main.services-cards .card .info p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 }
 @media (max-width: 768px) {
   #servicios {
@@ -436,13 +626,29 @@ button:hover, .btn:hover {
   #servicios p {
     font-size: 1rem;
   }
+<<<<<<< HEAD
   #servicios .card {
     padding: 1rem;
+=======
+  #servicios main.services-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  #servicios main.services-cards .card {
+    max-width: 90%;
+  }
+  #servicios main.services-cards .card .carousel-inner img {
+    height: 200px;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   }
 }
 
 #contacto {
+<<<<<<< HEAD
   background-color: #121212;
+=======
+  background: linear-gradient(to bottom, #121212, rgb(43.5, 43.5, 43.5));
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   color: #ffffff;
   padding: 5rem 2rem;
   text-align: center;
@@ -465,11 +671,18 @@ button:hover, .btn:hover {
 #contacto p {
   font-size: 1.1rem;
   margin-bottom: 2.5rem;
+<<<<<<< HEAD
   color: #ffffff;
+=======
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 }
 #contacto p a {
   color: #F7D42C;
   text-decoration: none;
+<<<<<<< HEAD
+=======
+  transition: color 0.3s;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 }
 #contacto p a:hover {
   color: rgb(231.2328767123, 192.8767123288, 8.7671232877);
@@ -478,12 +691,17 @@ button:hover, .btn:hover {
   justify-content: center;
 }
 #contacto .row .card {
+<<<<<<< HEAD
   background-color: #000;
+=======
+  background: rgba(0, 0, 0, 0.7);
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   border: none;
   border-radius: 0.75rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   padding: 2rem;
   transition: transform 0.3s, box-shadow 0.3s;
+<<<<<<< HEAD
   color: #ffffff;
   max-width: 100%;
 }
@@ -514,6 +732,16 @@ button:hover, .btn:hover {
 #contacto .row .card p a:hover {
   color: rgb(231.2328767123, 192.8767123288, 8.7671232877);
 }
+=======
+}
+#contacto .row .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+#contacto .row .card h4, #contacto .row .card h5 {
+  color: #F7D42C;
+}
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 #contacto .row .card p i {
   margin-right: 0.5rem;
 }
@@ -530,6 +758,7 @@ button:hover, .btn:hover {
 #contacto .row .card .d-flex .social-logo:hover {
   transform: scale(1.2);
 }
+<<<<<<< HEAD
 #contacto .btn {
   background-color: #F7D42C;
   color: #121212;
@@ -556,6 +785,8 @@ button:hover, .btn:hover {
   margin-bottom: 1rem;
   color: #ffffff;
 }
+=======
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 #contacto .whatsapp-float {
   position: fixed;
   bottom: 2rem;
@@ -563,6 +794,12 @@ button:hover, .btn:hover {
   width: 60px;
   height: 60px;
   z-index: 100;
+<<<<<<< HEAD
+=======
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   transition: transform 0.3s;
 }
 #contacto .whatsapp-float img {
@@ -580,20 +817,33 @@ button:hover, .btn:hover {
   text-align: center;
 }
 #nosotros .container {
+<<<<<<< HEAD
   max-width: 1000px;
+=======
+  max-width: 1200px;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   margin: 0 auto;
 }
 #nosotros h1 {
   font-size: 2.5rem;
   font-weight: bold;
+<<<<<<< HEAD
   margin-bottom: 1rem;
+=======
+  margin-bottom: 2rem;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   color: #F7D42C;
 }
 #nosotros p {
   font-size: 1.1rem;
   color: #ffffff;
   line-height: 1.6;
+<<<<<<< HEAD
   margin-bottom: 2.5rem;
+=======
+  margin-bottom: 1.5rem;
+  text-align: center;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 }
 #nosotros p a {
   color: #F7D42C;
@@ -629,6 +879,35 @@ button:hover, .btn:hover {
 }
 #nosotros .row .card i {
   margin-bottom: 1rem;
+<<<<<<< HEAD
+=======
+  transition: transform 0.3s ease;
+}
+#nosotros .row .card i:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+#nosotros .row.align-items-center img {
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+#nosotros .row.align-items-center img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+#nosotros ul {
+  list-style: none;
+  padding: 0;
+}
+#nosotros ul li {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+#nosotros ul li i {
+  margin-right: 0.5rem;
+  color: #28a745;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 }
 #nosotros .btn {
   background-color: #F7D42C;
@@ -660,6 +939,12 @@ button:hover, .btn:hover {
     font-size: 1rem;
     padding: 0.6rem 1.5rem;
   }
+<<<<<<< HEAD
+=======
+  #nosotros ul li {
+    font-size: 1rem;
+  }
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
 }
 
 /*# sourceMappingURL=style.css.map */

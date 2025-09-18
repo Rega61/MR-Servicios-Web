@@ -2,17 +2,26 @@
 @use "sass:color";
 
 #servicios {
+<<<<<<< HEAD
   background-color: vars.$dark-bg; // fondo oscuro
+=======
+  background-color: vars.$dark-bg; 
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   color: vars.$text-color;
   padding: 5rem 2rem;
   text-align: center;
 
+<<<<<<< HEAD
   .container {
     max-width: 1200px;
     margin: 0 auto;
   }
 
   // 🔹 Título principal
+=======
+  .container { max-width: 1200px; margin: 0 auto; }
+
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   h1 {
     font-size: 2.5rem;
     font-weight: bold;
@@ -20,12 +29,16 @@
     color: #F7D42C;
   }
 
+<<<<<<< HEAD
   // 🔹 Párrafo introductorio
+=======
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   p {
     font-size: 1.1rem;
     margin-bottom: 2.5rem;
     color: vars.$text-color;
     line-height: 1.6;
+<<<<<<< HEAD
 
     a {
       color: vars.$accent-color;
@@ -79,11 +92,85 @@
         .card-text {
           font-size: 0.95rem;
           color: vars.$text-color;
+=======
+  }
+
+  main.services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    .card {
+      position: relative;
+      flex: 1 1 300px;
+      max-width: 350px;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: vars.$dark-bg;
+      border: none;
+      transition: transform 0.5s, box-shadow 0.5s;
+
+      // Carrusel Bootstrap
+      .carousel-inner img {
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      &:hover .carousel-inner img {
+        transform: scale(1.1);
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px #F7D42C;
+      }
+
+      // Overlay de información en la parte inferior
+      .layer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.925), transparent); // fondo inicial semi-transparente
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+        padding: 1.5rem;
+        opacity: 0;
+        transition: opacity 0.5s, background 0.3s; // animación de fondo y opacidad 
+      }
+
+      &:hover .layer {
+        opacity: 1;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.914), transparent); // se oscurece al hover
+      }
+
+      .info {
+        color: #fff;
+
+        h1 {
+          font-size: 1.5rem;
+          color: #F7D42C;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+          line-height: 1.4;
+          margin-bottom: 0;
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
         }
       }
     }
   }
 
+<<<<<<< HEAD
   // 🔹 Botón de acción
   .btn {
     background-color: vars.$accent-color;
@@ -103,11 +190,27 @@
   }
 
   // 🔹 Responsive
+=======
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   @media (max-width: 768px) {
     padding: 3rem 1rem;
 
     h1 { font-size: 2rem; }
     p { font-size: 1rem; }
+<<<<<<< HEAD
     .card { padding: 1rem; }
+=======
+
+    main.services-cards {
+      flex-direction: column;
+      align-items: center;
+
+      .card {
+        max-width: 90%;
+
+        .carousel-inner img { height: 200px; }
+      }
+    }
+>>>>>>> 5cf11e3 (Actualizacion y cambios generales)
   }
 }
