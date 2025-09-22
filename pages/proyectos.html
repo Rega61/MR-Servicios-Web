@@ -1,199 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Meta básicos -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MR Servicios</title>
-  <link rel="icon" type="image/png" href="../img/logomr.jpeg">
+  <meta name="description" content="Servicios profesionales en electricidad, automatización industrial y seguridad en Laguna Paiva y alrededores.">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../img/logomr.jpeg">
+  <link rel="apple-touch-icon" href="../img/logomr.jpeg">
+
+  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS externos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <link rel="stylesheet" href="../css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Estilos internos -->
   <style>
-    .card-img-top, .carousel-inner img {
+    .card-img-top,
+    .carousel-inner img {
       height: 200px;
       object-fit: cover;
     }
   </style>
 </head>
 <body>
-<header>
-  <nav class="navbar navbar-fullwidth navbar-expand-lg sticky-top">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="../index.html">
-        <img src="../img/logomr.jpeg" alt="MR Servicios Logo" class="logo me-2">
-      </a>
 
-      <!-- Botón hamburguesa animado -->
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-fullwidth navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+          <img src="../img/logomr.jpeg" alt="MR Servicios Logo" class="logo me-2">
+        </a>
 
-      <!-- Menú -->
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="proyectos.html">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-        </ul>
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Menú -->
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="proyectos.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sección Servicios -->
+  <section id="servicios" class="py-5">
+    <div class="container">
+      <!-- Título -->
+      <h1 class="text-center mb-4" data-aos="fade-up">Nuestros Servicios</h1>
+      <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="150">
+        Ofrecemos soluciones profesionales en electricidad, automatización industrial y seguridad para hogares, comercios e industrias.
+      </p>
+
+      <!-- Cards de Servicios -->
+      <main class="services-cards">
+
+        <!-- Card 1: Energía Solar -->
+        <div class="card">
+          <div id="carouselSolar" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="../img/solar/solar1.jpeg" class="d-block w-100 image" alt="Energía Solar"></div>
+              <div class="carousel-item"><img src="../img/solar/solar2.jpeg" class="d-block w-100 image" alt="Energía Solar"></div>
+              <div class="carousel-item"><img src="../img/solar/solar3.jpeg" class="d-block w-100 image" alt="Energía Solar"></div>
+              <div class="carousel-item"><img src="../img/solar/solar4.jpeg" class="d-block w-100 image" alt="Energía Solar"></div>
+              <div class="carousel-item"><img src="../img/solar/solar5.jpeg" class="d-block w-100 image" alt="Energía Solar"></div>
+            </div>
+          </div>
+          <div class="layer">
+            <div class="info">
+              <h1>SERVICIOS DE ENERGÍA SOLAR</h1>
+              <p>Soluciones completas en energías renovables, con enfoque en eficiencia, seguridad y sustentabilidad.</p>
+              <p>Incluye ingeniería, instalación, integración y mantenimiento, cumpliendo normas de seguridad y calidad.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Automatización -->
+        <div class="card">
+          <div id="carouselAutomatizacion" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="../img/automatizacion/automa1.jpeg" class="d-block w-100 image" alt="Automatización"></div>
+              <div class="carousel-item"><img src="../img/automatizacion/automa2.jpeg" class="d-block w-100 image" alt="Automatización"></div>
+              <div class="carousel-item"><img src="../img/automatizacion/automa3.jpeg" class="d-block w-100 image" alt="Automatización"></div>
+              <div class="carousel-item"><img src="../img/automatizacion/automa4.jpeg" class="d-block w-100 image" alt="Automatización"></div>
+              <div class="carousel-item"><img src="../img/automatizacion/automa5.jpeg" class="d-block w-100 image" alt="Automatización"></div>
+            </div>
+          </div>
+          <div class="layer">
+            <div class="info">
+              <h1>MONTAJES Y AUTOMATIZACIÓN INDUSTRIAL</h1>
+              <p>Sistemas de control y automatización que optimizan procesos y aumentan eficiencia.</p>
+              <p>Soluciones inteligentes adaptadas a cada industria, asegurando fiabilidad y seguridad.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Seguridad -->
+        <div class="card">
+          <div id="carouselSeguridad" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="../img/camaras/camaras5.jpg" class="d-block w-100 image" alt="Seguridad"></div>
+              <div class="carousel-item"><img src="../img/camaras/camaras4.jpg" class="d-block w-100 image" alt="Seguridad"></div>
+              <div class="carousel-item"><img src="../img/camaras/camaras3.jpeg" class="d-block w-100 image" alt="Seguridad"></div>
+              <div class="carousel-item"><img src="../img/camaras/camaras2.jpeg" class="d-block w-100 image" alt="Seguridad"></div>
+              <div class="carousel-item"><img src="../img/camaras/camaras1.jpeg" class="d-block w-100 image" alt="Seguridad"></div>
+            </div>
+          </div>
+          <div class="layer">
+            <div class="info">
+              <h1>SISTEMAS DE SEGURIDAD</h1>
+              <p>Instalación y mantenimiento de cámaras, alarmas y monitoreo profesional.</p>
+              <p>Protección integral con tecnología de última generación y cumplimiento normativo.</p>
+            </div>
+          </div>
+        </div> 
+
+        <!-- Card 4: Refrigeración y Climatización -->
+        <div class="card">
+          <div id="carouselRefrigeracion" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="../img/aires/refri1.jpeg" class="d-block w-100 image" alt="Refrigeración"></div>
+              <div class="carousel-item"><img src="../img/aires/refri2.jpeg" class="d-block w-100 image" alt="Refrigeración"></div>
+              <div class="carousel-item"><img src="../img/aires/refri3.jpeg" class="d-block w-100 image" alt="Refrigeración"></div>
+              <div class="carousel-item"><img src="../img/aires/refri4.jpeg" class="d-block w-100 image" alt="Refrigeración"></div>
+              <div class="carousel-item"><img src="../img/aires/refri5.jpeg" class="d-block w-100 image" alt="Refrigeración"></div>
+            </div>
+          </div>
+          <div class="layer">
+            <div class="info">
+              <h1>SISTEMAS DE REFRIGERACIÓN Y CLIMATIZACIÓN</h1>
+              <p>Instalación, reparación y mantenimiento de split, multisplit y VRF, garantizando eficiencia, confort y seguridad.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Mantenimiento Electromecánico -->
+        <div class="card">
+          <div id="carouselMantenimiento" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="../img/manteni/mant1.jpeg" class="d-block w-100 image" alt="Mantenimiento"></div>
+              <div class="carousel-item"><img src="../img/manteni/mant2.jpeg" class="d-block w-100 image" alt="Mantenimiento"></div>
+              <div class="carousel-item"><img src="../img/manteni/mant3.jpeg" class="d-block w-100 image" alt="Mantenimiento"></div>
+              <div class="carousel-item"><img src="../img/manteni/mant4.jpeg" class="d-block w-100 image" alt="Mantenimiento"></div>
+              <div class="carousel-item"><img src="../img/manteni/mant5.jpeg" class="d-block w-100 image" alt="Mantenimiento"></div>
+            </div>
+          </div>
+          <div class="layer">
+            <div class="info">
+              <h1>MANTENIMIENTO ELÉCTRICO Y ELECTROMECÁNICO</h1>
+              <p>Experiencia en instalaciones eléctricas y equipos electromecánicos, brindando soluciones confiables para industria, comercio y residencias.</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- Botón CTA -->
+      <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="350">
+        <a href="contacto.html" class="btn btn-primary btn-lg">Solicitar Presupuesto</a>
       </div>
     </div>
-  </nav>
-</header>
+  </section>
 
+  <!-- WhatsApp -->
+  <a href="https://wa.me/5493425431804" target="_blank" class="whatsapp-float" data-aos="fade-left" data-aos-delay="1200">
+    <img src="../img/wpplogo.png" alt="WhatsApp" />
+  </a>
 
-<!-- Sección de Servicios -->
-<section id="servicios" class="py-5">
-  <div class="container">
-    <!-- Título -->
-    <h1 class="text-center mb-4" data-aos="fade-up">Nuestros Servicios</h1>
-    <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="150">
-      Ofrecemos soluciones profesionales en electricidad, automatización industrial y seguridad para hogares, comercios e industrias.
-    </p>
-
-<main class="services-cards">
-  <!-- Card 1 -->
-  <div class="card">
-    <div id="carouselSolar" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../img/solar/solar1.jpeg" class="d-block w-100 image" alt="Energía Solar">
-        </div>
-        <div class="carousel-item">
-          <img src="../img/solar/solar2.jpeg" class="d-block w-100 image" alt="Energía Solar">
-        </div>
-        <div class="carousel-item">
-          <img src="../img/solar/solar3.jpeg" class="d-block w-100 image" alt="Energía Solar">
-        </div>
-        <div class="carousel-item">
-          <img src="../img/solar/solar4.jpeg" class="d-block w-100 image" alt="Energía Solar">
-        </div>
-        <div class="carousel-item">
-          <img src="../img/solar/solar5.jpeg" class="d-block w-100 image" alt="Energía Solar">
-        </div>
-      </div>
+  <!-- Footer -->
+  <footer data-aos="fade-up" data-aos-delay="400">
+    <div class="container">
+      <p>MR Servicios – Laguna Paiva, Santa Fe | m.r.servicios@outlook.com | +54 9 342 431-1804</p>
+      <small>&copy; 2025 MR Servicios. Todos los derechos reservados.</small>
     </div>
-    <div class="layer">
-      <div class="info">
-        <h1>SERVICIOS DE ENERGÍA SOLAR</h1>
-        <p>Ofrecemos soluciones completas en energías renovables, con enfoque en eficiencia, seguridad y sustentabilidad.</p>
-        <p>Brindamos un servicio integral que abarca ingeniería, instalación, integración y mantenimiento preventivo/correctivo, cumpliendo con normativas de seguridad eléctrica y estándares de calidad.</p>
-      </div>
-    </div>
-  </div>
+  </footer>
 
-  <!-- Card 2 -->
-<div class="card">
-  <div id="carouselAutomatizacion" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../img/automatizacion/automa1.jpeg" class="d-block w-100 image" alt="Automatización">
-      </div>
-      <div class="carousel-item">
-        <img src="../img/automatizacion/automa2.jpeg" class="d-block w-100 image" alt="Automatización">
-      </div>
-      <div class="carousel-item">
-        <img src="../img/automatizacion/automa3.jpeg" class="d-block w-100 image" alt="Automatización">
-      </div>
-      <div class="carousel-item">
-        <img src="../img/automatizacion/automa4.jpeg" class="d-block w-100 image" alt="Automatización">
-      </div>
-      <div class="carousel-item">
-        <img src="../img/automatizacion/automa5.jpeg" class="d-block w-100 image" alt="Automatización">
-      </div>
-    </div> <!-- fin carousel-inner -->
-  </div>
-    <div class="layer">
-      <div class="info">
-        <h1>AUTOMATIZACIÓN INDUSTRIAL</h1>
-        <p>Sistemas de control y automatización que optimizan procesos, reducen costos y aumentan eficiencia.</p>
-        <p>Implementamos soluciones inteligentes adaptadas a las necesidades de cada industria, asegurando fiabilidad y seguridad.</p>
-      </div>
-    </div>
-  </div>
-  
-  
-  <!-- Card 3 -->
-  <div class="card">
-    <div id="carouselSeguridad" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../img/camaras/camaras5.jpg" class="d-block w-100 image" alt="Seguridad">
-        </div>
-        <div class="carousel-item">
-          <img src="../img/camaras/camaras4.jpg" class="d-block w-100 image" alt="Seguridad">
-        </div>
-        <div class="carousel-item">
-          <img src="../img/camaras/camaras3.jpeg" class="d-block w-100 image" alt="Seguridad">
-        </div>
-        <div class="carousel-item">
-          <img src="../img/camaras/camaras2.jpeg" class="d-block w-100 image" alt="Seguridad">
-        </div>
-        <div class="carousel-item">
-          <img src="../img/camaras/camaras1.jpeg" class="d-block w-100 image" alt="Seguridad">
-        </div>
-      </div>
-    </div>
-    <div class="layer">
-      <div class="info">
-        <h1>SISTEMAS DE SEGURIDAD</h1>
-        <p>Instalación y mantenimiento de cámaras de seguridad, alarmas y monitoreo profesional.</p>
-        <p>Garantizamos protección integral mediante tecnología de última generación y cumplimiento de normativas vigentes.</p>
-      </div>
-    </div>
-  </div>
-</main>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
 
-    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="350">
-      <a href="contacto.html" class="btn btn-primary btn-lg">Solicitar Presupuesto</a>
-    </div>
-  </div>
-</section>
+    // Activar enlace activo en navbar
+    const currentLocation = location.href;
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.classList.toggle('active', link.href === currentLocation);
+    });
 
-<a href="https://wa.me/5493421234567" target="_blank" class="whatsapp-float">
-  <img src="../img/wpplogo.png" alt="WhatsApp" />
-</a>
-
-<footer>
-  <div class="container">
-    <p>MR Servicios – Laguna Paiva | info@mrservicios.com.ar | +54 9 342 123-4567</p>
-    <small>&copy; 2025 MR Servicios. Todos los derechos reservados.</small>
-  </div>
-</footer>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 1000, once: true });
-
-  // Activar enlace activo en navbar
-  const currentLocation = location.href;
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    if (link.href === currentLocation) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
-
-  // Inicializar todos los carruseles
-  document.addEventListener('DOMContentLoaded', function () {
-    var carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(function(carouselEl) {
-      new bootstrap.Carousel(carouselEl, {
-        interval: 3500,
-        ride: 'carousel'
+    // Inicializar carruseles
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.carousel').forEach(carouselEl => {
+        new bootstrap.Carousel(carouselEl, { interval: 3500, ride: 'carousel' });
       });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>

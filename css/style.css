@@ -444,7 +444,7 @@ button:hover, .btn:hover {
   text-align: center;
 }
 #servicios .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 #servicios h1 {
@@ -470,32 +470,33 @@ button:hover, .btn:hover {
 #servicios main.services-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
 }
 #servicios main.services-cards .card {
   position: relative;
-  flex: 1 1 300px;
-  max-width: 350px;
+  flex: 1 1 250px;
+  max-width: 280px;
   border-radius: 0.75rem;
   overflow: hidden;
   cursor: pointer;
   background-color: #121212;
   border: none;
-  transition: transform 0.5s, box-shadow 0.5s;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease, z-index 0.3s;
 }
 #servicios main.services-cards .card .carousel-inner img {
   width: 100%;
-  height: 550px;
+  height: 480px;
   object-fit: cover;
-  transition: transform 0.5s;
-}
-#servicios main.services-cards .card:hover .carousel-inner img {
-  transform: scale(1.1);
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 #servicios main.services-cards .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px #F7D42C;
+  transform: scale(1.3);
+  z-index: 5;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+#servicios main.services-cards .card:hover .carousel-inner img {
+  filter: brightness(0.9);
 }
 #servicios main.services-cards .card .layer {
   position: absolute;
@@ -529,6 +530,11 @@ button:hover, .btn:hover {
   line-height: 1.4;
   margin-bottom: 0;
 }
+#servicios main.services-cards:hover > .card:not(:hover) {
+  filter: blur(5px);
+  transform: scale(0.9);
+  opacity: 0.7;
+}
 #servicios .btn {
   background-color: #F7D42C;
   color: #121212;
@@ -544,6 +550,24 @@ button:hover, .btn:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
+@media (max-width: 1200px) {
+  #servicios main.services-cards .card {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+  #servicios main.services-cards .card .carousel-inner img {
+    height: 320px;
+  }
+}
+@media (max-width: 992px) {
+  #servicios main.services-cards .card {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+  #servicios main.services-cards .card .carousel-inner img {
+    height: 300px;
+  }
+}
 @media (max-width: 768px) {
   #servicios {
     padding: 3rem 1rem;
@@ -557,12 +581,28 @@ button:hover, .btn:hover {
   #servicios main.services-cards {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
   #servicios main.services-cards .card {
+    flex: 1 1 90%;
     max-width: 90%;
   }
   #servicios main.services-cards .card .carousel-inner img {
-    height: 200px;
+    height: 220px;
+  }
+}
+@media (max-width: 480px) {
+  #servicios {
+    padding: 2rem 1rem;
+  }
+  #servicios h1 {
+    font-size: 1.8rem;
+  }
+  #servicios p {
+    font-size: 0.95rem;
+  }
+  #servicios main.services-cards .card .carousel-inner img {
+    height: 180px;
   }
 }
 
